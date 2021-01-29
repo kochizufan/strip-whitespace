@@ -36,7 +36,7 @@ export default class StripWhitespace {
   }
 
   private stripString(fatString: string): string {
-    return fatString.replace(/[\s]+/g, ' ');
+    return fatString.replace(/[\s]+/g, ' ').replace(/"/g, '\\"');
   }
 
   private getStringReplacements(startingNode: Node): StringReplacement[] {
